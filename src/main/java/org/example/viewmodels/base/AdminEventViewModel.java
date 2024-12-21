@@ -1,9 +1,10 @@
 package org.example.viewmodels.base;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public record AdminEventViewModel(
-        String id,
+        UUID id,
         String name,
         LocalDateTime date,
         int cost,

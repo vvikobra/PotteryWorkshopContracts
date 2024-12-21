@@ -21,8 +21,8 @@ public interface UserController extends BaseController {
 
     @PostMapping("/register")
     String register(@Valid @ModelAttribute("form") SignUpForm signUpForm,
-                  BindingResult bindingResult,
-                  Model model);
+                    BindingResult bindingResult,
+                    Model model);
 
     @GetMapping("/edit")
     String editForm(Principal principal,

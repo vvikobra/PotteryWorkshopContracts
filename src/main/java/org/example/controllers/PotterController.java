@@ -34,9 +34,9 @@ public interface PotterController extends BaseController {
 
     @PostMapping("/{potterId}/edit")
     String editPotter(@PathVariable UUID potterId,
-                     @Valid @ModelAttribute("form") EditPotterForm editPotterForm,
-                     BindingResult bindingResult,
-                     Model model);
+                      @Valid @ModelAttribute("form") EditPotterForm editPotterForm,
+                      BindingResult bindingResult,
+                      Model model);
 
     @PostMapping("/{potterId}/dismiss")
     String dismissPotter(@PathVariable UUID potterId);

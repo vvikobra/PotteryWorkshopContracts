@@ -28,11 +28,11 @@ public interface EventController extends BaseController {
 
     @GetMapping("/{eventId}/edit")
     String editForm(
-            @PathVariable String eventId,
+            @PathVariable UUID eventId,
             Model model);
 
     @PostMapping("/{eventId}/edit")
-    String editEvent(@PathVariable String eventId,
+    String editEvent(@PathVariable UUID eventId,
                      @Valid @ModelAttribute("form") EditEventForm editEventForm,
                      BindingResult bindingResult,
                      Model model);
@@ -50,8 +50,8 @@ public interface EventController extends BaseController {
 
     @GetMapping("/discount/{eventId}")
     String registerToDiscountEventForm(Principal principal,
-                               @PathVariable UUID eventId,
-                               Model model);
+                                       @PathVariable UUID eventId,
+                                       Model model);
 
     @PostMapping("/{eventId}")
     String registerToEvent(Principal principal,
@@ -62,8 +62,8 @@ public interface EventController extends BaseController {
 
     @PostMapping("/discount/{eventId}")
     String registerToDiscountEvent(Principal principal,
-                           @PathVariable UUID eventId,
-                           @Valid @ModelAttribute("form") EventRegistrationForm eventRegistrationForm,
-                           BindingResult bindingResult,
-                           Model model);
+                                   @PathVariable UUID eventId,
+                                   @Valid @ModelAttribute("form") EventRegistrationForm eventRegistrationForm,
+                                   BindingResult bindingResult,
+                                   Model model);
 }
