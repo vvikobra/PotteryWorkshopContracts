@@ -35,7 +35,7 @@ public interface UserController extends BaseController {
             BindingResult bindingResult,
             Model model);
 
-    @GetMapping("/{userId}/{status}")
+    @GetMapping("/profile/{status}")
     String showUserProfile(Principal principal,
                            @PathVariable String status,
                            Model model);
