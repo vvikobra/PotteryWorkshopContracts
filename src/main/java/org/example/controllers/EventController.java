@@ -21,7 +21,7 @@ public interface EventController extends BaseController {
     String createForm(Model model);
 
     @PostMapping("/create")
-    String addEvent(
+    String createEvent(
             @Valid @ModelAttribute("form") AddEventForm addEventForm,
             BindingResult bindingResult,
             Model model);
